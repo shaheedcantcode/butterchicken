@@ -13,10 +13,36 @@ buttonsDiv.addEventListener("click", (e) => {
 });
 
 noBtn.addEventListener("click", () => {
-  for (let i = 0; i < 3; i++) {
+  const rect = noBtn.getBoundingClientRect();
+
+  for (let i = 0; i < 6; i++) {
     const yes = document.createElement("button");
     yes.textContent = "YES 😘";
     yes.className = "yes";
-    buttonsDiv.appendChild(yes);
+
+    yes.style.position = "absolute";
+    yes.style.left =
+      rect.left + Math.random() * rect.width - rect.width / 2 + "px";
+    yes.style.top =
+      rect.top + Math.random() * rect.height - rect.height / 2 + "px";
+
+    document.body.appendChild(yes);
   }
 });
+
+
+function spawnHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 10 + "px";
+  heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(spawnHeart, 400);
