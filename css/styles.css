@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background: linear-gradient(135deg, #800020, #650015);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: #9f1d35;
   padding: 40px;
   border-radius: 20px;
   text-align: center;
@@ -35,12 +35,12 @@ button:hover {
 }
 
 #yesBtn, .yes {
-  background: #ff4d6d;
-  color: white;
+  background: #650015;
+  color: #fdf1d6;
 }
 
-#no {
-  background: #ccc;
+#noBtn, .no  {
+  background: #fdf1d6;
 }
 
 .final {
@@ -112,3 +112,20 @@ button:hover {
   transform: scale(1.05);
 }
 
+.final-img {
+  width: 320px;
+  height: auto;
+  max-width: 90vw;
+}
+
+h1 {
+  color: #fdf1d6;
+}
+
+p {
+  color: #fdf1d6;
+}
+
+h2 {
+  color: #fdf1d6;
+}
